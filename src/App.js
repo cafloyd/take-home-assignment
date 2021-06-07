@@ -25,11 +25,17 @@ function App() {
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
       <form>
+        <fieldset>
+          <legend>Choose your mode:</legend>
+          <input type="radio" id="upper-radio"/>
+          <label for="upper-radio">Uppercase-ify!</label>
+          <input type="radio" id="lower-radio"/>
+          <label for="lower-radio">Lowercase-ify!</label>
+        </fieldset>
         <label>
           <textarea onChange={handleChange} value={textInput}/>
         </label>
-        <input type="submit" value="Lowercase-ify!" onClick={handleSubmitLower}/>
-        <input type="submit" value="Uppercase-ify!" onClick={handleSubmitUpper}/>
+        <input type="submit" value="Do some magic!"/>
       </form>
       <div id="result">
         {textOutput}
