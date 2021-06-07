@@ -9,9 +9,9 @@ function App() {
     setTextInput(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmitLower = event => {
     event.preventDefault();
-    setTextOutput('Your formatted text will go here!')
+    setTextOutput(textInput.toLowerCase())
   };
 
   return (
@@ -19,11 +19,11 @@ function App() {
       <header>
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>
           <textarea onChange={handleChange} value={textInput}/>
         </label>
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Lowercase-ify!" onClick={handleSubmitLower}/>
       </form>
       <div id="result">
         {textOutput}
