@@ -9,21 +9,27 @@ function App() {
     setTextInput(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmitLower = event => {
     event.preventDefault();
-    setTextOutput('Your formatted text will go here!')
+    setTextOutput(textInput.toLowerCase())
   };
+
+  const handleSubmitUpper = event => {
+    event.preventDefault();
+    setTextOutput(textInput.toUpperCase())
+  }
 
   return (
     <div className="App">
       <header>
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>
           <textarea onChange={handleChange} value={textInput}/>
         </label>
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Lowercase-ify!" onClick={handleSubmitLower}/>
+        <input type="submit" value="Uppercase-ify!" onClick={handleSubmitUpper}/>
       </form>
       <div id="result">
         {textOutput}
