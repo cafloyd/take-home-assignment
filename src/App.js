@@ -14,6 +14,11 @@ function App() {
     setTextOutput(textInput.toLowerCase())
   };
 
+  const handleSubmitUpper = event => {
+    event.preventDefault();
+    setTextOutput(textInput.toUpperCase())
+  }
+
   return (
     <div className="App">
       <header>
@@ -24,6 +29,7 @@ function App() {
           <textarea onChange={handleChange} value={textInput}/>
         </label>
         <input type="submit" value="Lowercase-ify!" onClick={handleSubmitLower}/>
+        <input type="submit" value="Uppercase-ify!" onClick={handleSubmitUpper}/>
       </form>
       <div id="result">
         {textOutput}
