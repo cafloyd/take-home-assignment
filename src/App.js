@@ -39,9 +39,9 @@ function App() {
       <form onSubmit={handleSubmit}>
         <fieldset onChange={handleRadio}>
           <legend>Choose your mode:</legend>
-          <input type="radio" id="upper-radio" value="uppercaseify"/>
+          <input type="radio" name="mode" id="upper-radio" value="uppercaseify" checked/>
           <label for="upper-radio">Uppercase-ify!</label>
-          <input type="radio" id="lower-radio" value="lowercaseify"/>
+          <input type="radio" name="mode" id="lower-radio" value="lowercaseify"/>
           <label for="lower-radio">Lowercase-ify!</label>
         </fieldset>
         <label>
