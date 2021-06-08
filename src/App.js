@@ -4,7 +4,7 @@ import React from "react";
 function App() {
   const [textInput, setTextInput] = React.useState('Here is some example text.');
   const [textOutput, setTextOutput] = React.useState('');
-  const [mode, setMode] = React.useState('');
+  const [mode, setMode] = React.useState('uppercaseify');
 
   const handleChange = event => {
     setTextInput(event.target.value);
