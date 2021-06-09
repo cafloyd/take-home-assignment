@@ -4,7 +4,7 @@ import React from "react";
 function App() {
   const [textInput, setTextInput] = React.useState('Here is some example text.');
   const [textOutput, setTextOutput] = React.useState('');
-  const [mode, setMode] = React.useState('uppercaseify');
+  const [mode, setMode] = React.useState('');
 
   const handleChange = event => {
     setTextInput(event.target.value);
@@ -39,9 +39,9 @@ function App() {
       <form onSubmit={handleSubmit}>
         <fieldset onChange={handleRadio}>
           <legend>Choose your mode:</legend>
-          <input type="radio" name="mode" id="upper-radio" value="uppercaseify" checked/>
+          <input type="radio" name="mode" id="upper-radio" value="uppercaseify" required/>
           <label for="upper-radio">Uppercase-ify!</label>
-          <input type="radio" name="mode" id="lower-radio" value="lowercaseify"/>
+          <input type="radio" name="mode" id="lower-radio" value="lowercaseify" required/>
           <label for="lower-radio">Lowercase-ify!</label>
         </fieldset>
         <label>
