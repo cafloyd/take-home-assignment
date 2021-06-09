@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" role="main">
       <header>
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
@@ -49,9 +49,9 @@ function App() {
         </label>
         <input type="submit" value="Do some magic!"/>
       </form>
-      <div id="result">
+      <p id="result">
         {textOutput}
-      </div>
+      </p>
     </div>
   );
 }
